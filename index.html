@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wrapped in your love, forever.❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 55px;
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .timer {
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            border-radius: 15px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #ff4b6e;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffe4ec;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Wrapped in your love, forever.❤️</h1>
+
+        <div class="heart">😻</div>
+
+        <p>Counting every heartbeat with you.</p>
+
+        <div class="timer" id="loveTimer"></div>
+
+        <br>
+
+        <button onclick="showLove()">Open your heart 💌</button>
+
+        <h2>Little moments, Big memories.</h2>
+
+        <div class="gallery">
+            <img src="zayu.jpg">
+            <img src="zayu.jpeg">
+            <img src="">
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+            <iframe data-testid="embed-iframe" 
+                style="border-radius:12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" 
+                src="https://open.spotify.com/embed/track/2w3ZZSNT6Bu9HvNe5HN3sE?utm_source=generator&theme=0" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+    <script>
+
+        function showLove() {
+            alert("LOVE YOU PAKHI❤️ \n\nNo matter where life takes us, our love will always stay strong. Forever together 💖");
+        }
+
+        function closeHeart() {
+            document.getElementById("heartModal").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function closeHeart() {
+            document.getElementById("heartModal").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+        var startDate = new Date("2026-02-05");
+
+        function updateTimer() {
+            var now = new Date();
+            var diff = now - startDate;
+
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+            var minutes = Math.floor(diff / (1000 * 60) % 60);
+            var seconds = Math.floor(diff / 1000 % 60);
+
+            document.getElementById("loveTimer").innerHTML =
+                "Together for: " + days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds";
+        }
+
+        setInterval(updateTimer, 1000);
+
+    </script>
+
+</body>
+
+</html>
